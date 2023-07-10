@@ -81,8 +81,4 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4'
     testImplementation 'com.squareup.okhttp3:mockwebserver:4.11.0'
 
-    // aws cognito libaries
-    implementation 'com.amazonaws:aws-android-sdk-cognitoidentityprovider:2.22.1'
-    implementation "com.amazonaws:aws-android-sdk-appsync:3.1.1"
-
 }
