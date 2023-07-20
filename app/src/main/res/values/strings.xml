@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Coroutines_Retrofit_MVVM</string>
+    <string name="todo">TODO</string>
+    <string name="movie">movie</string>
 </resources>
