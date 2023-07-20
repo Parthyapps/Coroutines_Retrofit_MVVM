@@ -7,9 +7,9 @@ Displaying data in a RecyclerView using View Binding.
 Implementing MVVM architecture for separation of concerns.
 
 # Technologies Used
-Android SDK
-Kotlin
-Retrofit
-RecyclerView
-MVVM Architecture
-View Binding
+Android SDK,
+Kotlin,
+Retrofit,
+RecyclerView,
+MVVM Architecture,
+View Binding.
