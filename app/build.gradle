@@ -41,7 +41,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
-    // Architectural Components viewmodel
+    // Architectural Components view model
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
 
     // Coroutines

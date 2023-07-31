@@ -12,7 +12,7 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
-class ListPageViewModel (private val repository: ListRepository) : ViewModel(){
+class MovieListPageViewModel (private val repository: ListRepository) : ViewModel(){
 
     private val _errorMessage = MutableLiveData<String>()
     val errorMessage: LiveData<String> get() = _errorMessage

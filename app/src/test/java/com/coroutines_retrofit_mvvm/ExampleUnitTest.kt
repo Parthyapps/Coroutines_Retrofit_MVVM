@@ -1,6 +1,6 @@
 package com.coroutines_retrofit_mvvm
 
-import com.coroutines_retrofit_mvvm.ui.ListPageActivity
+import com.coroutines_retrofit_mvvm.ui.MovieListPageActivity
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -12,7 +12,7 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
 
-    lateinit var helper: ListPageActivity
+    lateinit var helper: MovieListPageActivity
 
     @Test
     fun addition_isCorrect() {

@@ -7,7 +7,7 @@ import com.bumptech.glide.Glide
 import com.coroutines_retrofit_mvvm.data.model.Movie
 import com.coroutines_retrofit_mvvm.databinding.ItemImageBinding
 
-class ListAdapter(private val movie: List<Movie>) : RecyclerView.Adapter<ListAdapter.UserViewHolder>() {
+class MovieListAdapter(private val movie: List<Movie>) : RecyclerView.Adapter<MovieListAdapter.UserViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
         val binding = ItemImageBinding.inflate(LayoutInflater.from(parent.context), parent, false)

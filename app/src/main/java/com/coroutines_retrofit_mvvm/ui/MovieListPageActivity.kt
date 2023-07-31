@@ -6,14 +6,14 @@ import androidx.lifecycle.ViewModelProvider
 import com.coroutines_retrofit_mvvm.data.api.RetrofitService
 import com.coroutines_retrofit_mvvm.data.repository.ListRepository
 import com.coroutines_retrofit_mvvm.databinding.ActivityListBinding
-import com.coroutines_retrofit_mvvm.ui.adapter.ListAdapter
-import com.coroutines_retrofit_mvvm.ui.viewModel.ListPageViewModel
+import com.coroutines_retrofit_mvvm.ui.adapter.MovieListAdapter
+import com.coroutines_retrofit_mvvm.ui.viewModel.MovieListPageViewModel
 import com.coroutines_retrofit_mvvm.ui.viewModel.MyViewModelFactory
 
-class ListPageActivity : AppCompatActivity() {
+class MovieListPageActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityListBinding
-    private lateinit var userAdapter: ListAdapter
+    private lateinit var userAdapter: MovieListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +25,7 @@ class ListPageActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
-        userAdapter = ListAdapter(emptyList())
+        userAdapter = MovieListAdapter(emptyList())
         binding.recyclerView.adapter = userAdapter
     }
 
@@ -34,9 +34,9 @@ class ListPageActivity : AppCompatActivity() {
         val retrofit = RetrofitService.getInstance()
         val repository = ListRepository(retrofit)
 
-        val viewModel = ViewModelProvider(this, MyViewModelFactory(repository))[ListPageViewModel::class.java]
+        val viewModel = ViewModelProvider(this, MyViewModelFactory(repository))[MovieListPageViewModel::class.java]
         viewModel.movieList.observe(this) { users ->
-            userAdapter = ListAdapter(users)
+            userAdapter = MovieListAdapter(users)
             binding.recyclerView.adapter = userAdapter
         }
         viewModel.getAllMovies()
