@@ -15,9 +15,8 @@ import kotlinx.coroutines.launch
 class MovieListPageViewModel (private val repository: ListRepository) : ViewModel(){
 
     private val _errorMessage = MutableLiveData<String>()
-    val errorMessage: LiveData<String> get() = _errorMessage
     val movieList = MutableLiveData<List<Movie>>()
-    var job: Job? = null
+    private var job: Job? = null
 
     private val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
         onError("Exception handled: ${throwable.localizedMessage}")
@@ -35,6 +34,7 @@ class MovieListPageViewModel (private val repository: ListRepository) : ViewMode
                 }
                 is NetworkState.Error -> {
                     if (response.response.code() == 401) {
+                        Log.d("response 400", response.response.code().toString())
                         //movieList.postValue(NetworkState.Error())
                     } else {
                         //movieList.postValue(NetworkState.Error)
